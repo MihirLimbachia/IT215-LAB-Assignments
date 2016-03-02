@@ -326,13 +326,13 @@ else{
                       jid=atoi(&argv[1][1]);                                                  // getting the jobid from the second argument
                       jb=getjobjid(jobs,jid);                                                 // getting the job from the given jobid
                        if(jb==NULL){                                                          // checking if no job with given jid is found
-                       printf("%d : No such job\n",jid);                                      
+                       printf("%%%d: No such job\n",jid);                                      
                        return;
 }
                        
                   }
               
-               else if(argv[1][0]>47 && argv[1][0]<58){                                        // checking ig the second argument is a process id
+               else if(argv[1][0]>47 && argv[1][0]<58){                                        // checking if the second argument is a process id
                       jid=atoi(&argv[1][0]);                                                   // getting the process id form second argument 
                       jb= getjobpid(jobs,jid);                                                 // getting the job from the given proces id
                       if(jb==NULL){                                                            // checking if no job with geiven process id is found
@@ -342,7 +342,7 @@ else{
                  } 
     
                else{ 
-                  printf("%s command requires PID or %% jobid argument\n",argv[0]);            // if neither a job id formant nor a process id format
+                  printf("%s command requires PID or %% jobid\n",argv[0]);            // if neither a job id formant nor a process id format
                   return;                
  }
                   
